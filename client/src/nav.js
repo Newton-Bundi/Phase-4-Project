@@ -1,30 +1,33 @@
-const NavBar=()=>{
+import React from 'react'
+import './nav.css'
+import logo from './logo.png'
+
+function NavBar(){
+
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar">
             <div className="container-fluid">
+                <img src={logo} alt="Card" id="logo" className="logo" height={75} width={75}/>               
                 <a className="navbar-brand" href="/">Pet Shop App</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/owners">owners</a>
+                    <a className="nav-link active" aria-current="page" href="/availablepets">Available pets</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/availablepets">availablepets</a>
+                    <a className="nav-link active" aria-current="page" href="/owners">Owners</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/about">about</a>
+                    <a className="nav-link active" aria-current="page" href="/about">About</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/contact">contacts</a>
+                    <a className="nav-link active" aria-current="page" href="/contact">Contacts</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/signupform">user signup</a>
+                    <a className="nav-link active" aria-current="page" href="/signupform">User signup</a>
                     </li>
                     
                 </ul>

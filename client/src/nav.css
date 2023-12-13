@@ -1,0 +1,43 @@
+.navbar-brand{
+    padding:30px;
+    align-content: center;
+    word-break: normal;
+    font-size: xx-large;
+}
+
+.logo{
+    background: #F9CE81;
+    padding: 10px;
+}
+.navbar-nav{
+    margin-left: 20vh;
+ }
+
+.container-fluid{
+    background:#F9CE81;
+    position: flex;
+    display: flex;
+    /* border-bottom: 1px solid black; */
+}
+
+
+
+.nav-item{
+    padding:15px;
+    display: inline-block;
+}
+
+.navbar{
+    animation: fadein 5s;
+    z-index: +1;
+    margin: 0 auto 0 auto;
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
