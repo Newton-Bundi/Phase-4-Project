@@ -14,18 +14,19 @@ function Home(){
                 alignContent: "center",
                 alignItems: "center"
                 }}>
-                <h1>Nisaidie</h1>
+                <h1>One more friend</h1>
+                <h2>Thousands more fun</h2>
                 <p id='suc'
                 style={{
                     width: "50%",
                     fontWeight: 500
                 }}
-                >Nisaidie is suicide prevention app designed to provide a supportive and accessible platform for individuals in crisis. It aims to promote mental health awareness, offer resources, and foster a sense of community and hope.</p>
+                >Having a pet means you will always have more joy, a new friend, a happy person who will always be with you to have fun.We have over 100+ pets who can always meet you needs.</p>
             </div>
 
 
             <div >
-             <h3>Tell us what you are going through</h3>
+             <h3>Pick a pet</h3>
                         
         </div>
         </div>
