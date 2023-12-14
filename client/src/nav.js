@@ -27,7 +27,7 @@ function NavBar(){
                     <a className="nav-link active" aria-current="page" href="/contact">Contacts</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/signupform">User signup</a>
+                    <a className="nav-link active" aria-current="page" href="/signupform">User login / signup</a>
                     </li>
                     
                 </ul>

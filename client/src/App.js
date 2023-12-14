@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./home"
 import AvailablePets from "./availablepets";
-import SignupForm from "./signupform";
+import LoginSignup from "./signupform";
 import Owners from './owners';
 import Contact from './contact';
 import About from './about';
@@ -16,7 +16,7 @@ function App() {
         <Routes>
         <Route path={"/"} element={<Home/>} />
           <Route path={"/availablepets"} element={<AvailablePets/>} />
-          <Route path={"/signup"} element={<SignupForm/>} />
+          <Route path={"/signupform"} element={<LoginSignup/>} />
           <Route path={"/owners"} element={<Owners/>} />
           <Route path={"/about"} element={<About/>} />
           <Route path={"/contact"} element={<Contact/>} />

@@ -26,8 +26,7 @@ function Home(){
 
 
             <div >
-             <h3>Pick a pet</h3>
-                        
+             <h3>Pick a pet</h3>         
         </div>
         </div>
     );
