@@ -6,7 +6,7 @@ function Owners () {
   const [cardData, setCardData] = useState([]);
 
   const fetchData = () => {
-    return fetch('http://localhost:8002/owners') 
+    return fetch('http://127.0.0.1:5000/owners') 
     .then((response) => response.json())
     .then((data) => {
       setCardData(data); 
@@ -22,15 +22,15 @@ function Owners () {
 
 
   return (
-    <div>
-      <h1>Meet our happy customers</h1>
+    <div className="owner-header">
+      <h1 style={{fontSize:"60px"}}>Meet our happy customers</h1>
       <div className="card-list">
         {cardData.map((card) => (
           <Card
             key={card.id}
             card={card}
-            imageUrl={card.imageUrl}
-            name={card.name}
+            imageUrl={card.imageurl}
+            name={card.username}
             pets={card.pets}
           />
         ))}

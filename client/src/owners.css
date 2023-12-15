@@ -1,3 +1,9 @@
+.owner-header{
+    background: #FCEED5;
+    height: 100vh;
+}
+
+
 .card-list{
     display: flex;
     flex-wrap: wrap;
