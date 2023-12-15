@@ -5,7 +5,7 @@ function Card ({card}) {
 
   
     return (
-      <div className="card" style={{width: 700}}>
+      <div className="card">
         <div className="top-section">
           <img src={card.imageUrl} alt="Card" className="owner-card-image" height={150} width={150}/>
         </div>

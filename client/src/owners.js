@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './ownercard';
+import './owners.css';
 
 function Owners () {
   const [cardData, setCardData] = useState([]);
@@ -23,14 +24,7 @@ function Owners () {
   return (
     <div>
       <h1>Meet our happy customers</h1>
-      <div className="card-list" style={{
-        width: "100%",
-        display: 'flex',
-        flexDirection: "column",
-        justifyContent: "center",
-        alignContent: "center",
-        alignItems: "center"
-      }}>
+      <div className="card-list">
         {cardData.map((card) => (
           <Card
             key={card.id}

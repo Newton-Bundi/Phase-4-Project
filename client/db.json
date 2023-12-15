@@ -2,7 +2,7 @@
     "owners": [
       {
         "id": 101,
-        "name": "wHz-93",
+        "name": "Winnie",
         "imageUrl": "https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1",
         "pets": 3,
         "age": 40
@@ -10,21 +10,21 @@
       },
       {
         "id": 102,
-        "name": "RyM-66",
+        "name": "Poo",
         "imageUrl": "https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1",
         "pets":1,
         "age": 18
       },
       {
         "id": 103,
-        "name": "P-24",
+        "name": "Frank",
         "imageUrl": "https://robohash.org/idetcumque.png?size=300x300&set=set1",
         "pets": 3,
         "age": 25
       },
       {
         "id": 104,
-        "name": "qq-69",
+        "name": "Ben",
         "imageUrl": "https://robohash.org/corruptieaqueexcepturi.png?size=300x300&set=set1",
         "pets": 1,
         "age": 36
