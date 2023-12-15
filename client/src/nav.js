@@ -7,7 +7,7 @@ function NavBar(){
     return (
         <nav className="navbar">
             <div className="container-fluid">
-                <img src={logo} alt="Card" id="logo" className="logo" height={75} width={75}/>               
+                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROB6_YH-YBUNtcMScjsb7zHQi2NjELgzaU2Q&usqp=CAU"} alt="Card" id="logo" className="logo" height={75} width={75}/>               
                 <a className="navbar-brand" href="/">Pet Shop App</a>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">

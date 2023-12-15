@@ -1,10 +1,20 @@
-.header{
+.header {
     background: #FCEED5;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
  }
 
- .left-side, .right-side {
+.header h1{
+    font-size: 100px;
+}
+
+.header h2{
+    font-size: 50px;
+}
+
+.header p{
+    font-size: 20px;
+}
+
+.left-side,.right-side {
     padding: 20px;
     box-sizing: border-box;
   }

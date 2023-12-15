@@ -10,11 +10,12 @@
     padding: 10px;
 }
 .navbar-nav{
-    margin-left: 20vh;
+    margin-left: 35vh;
  }
 
 .container-fluid{
     background:#F9CE81;
+    align-content: baseline;
     position: flex;
     display: flex;
     /* border-bottom: 1px solid black; */
@@ -23,12 +24,14 @@
 
 
 .nav-item{
-    padding:15px;
+    padding-top:30px;
+    padding: 15px;
     display: inline-block;
+    font-size: x-large;
 }
 
 .navbar{
-    animation: fadein 5s;
+    animation: fadein 1s;
     z-index: +1;
     margin: 0 auto 0 auto;
   }
