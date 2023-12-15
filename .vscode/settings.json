@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "bjhgv",
+            "group": "jhvghc",
+            "database": "instance/pet.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "local",
+            "group": "local",
+            "database": "instance/pets.db"
+        }
+    ]
+}
