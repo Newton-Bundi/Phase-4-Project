@@ -5,8 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-### npm install
-Please run this first in the client folder to install all dependancies
+### `npm install`
+Please run this first in the client folder to install all dependencies
+
+### `npm run server`
+Please run this to set up the db.json server
 
 ### `npm start`
 
