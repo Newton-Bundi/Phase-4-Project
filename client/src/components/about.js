@@ -34,7 +34,7 @@ function About(){
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuZVkfmNVYUG9apjwQ30yxuMXL83usa_Jxg&usqp=CAU'
                 className='about-img'
                 alt='Developer 2'></img>
-                <h3>Eunice</h3>
+                <h3>Eunice Mwenda</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             </div>
