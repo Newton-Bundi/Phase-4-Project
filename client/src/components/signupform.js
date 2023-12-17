@@ -4,18 +4,11 @@ import '../css/loginsignup.css';
 import user_icon from '../images/person.png';
 import email_icon from '../images/email.png'; 
 import password_icon from '../images/password.png'; 
+import Notification from './notification';
 
-const Notification = ({status, msg}) => {
-  return (
-    <div style={{color: status === 'success' ? 'green' : 'red', backgroundColor: status === 'success' ? 'lightgreen' : 'lightcoral', padding: '10px', borderRadius: '5px'}}>
-      <div className="text">{status}</div>
-      <div className="text">{msg}</div>
-    </div>
-  )
-}
+
 
 const Signup = () => {
-  const [username, setUsername] = useState('');
   // const [age, setAge] = useState('');
   // const [profilePic, setProfilePic] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +19,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username,email, password);
+    console.log(email,email, password);
     fetch('http://localhost:5000/signup', {
       method: 'POST',
       crossDomain: true,
@@ -36,7 +29,7 @@ const Signup = () => {
         'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
-        username,
+        username: email,
         email,
         password,
       }),
@@ -44,6 +37,7 @@ const Signup = () => {
       
       if (res.status === 200 || res.status === 201) {
         setStatus('success');
+        window.location.href = '/loginform';
       } else {
         setStatus('error');
       }
@@ -63,15 +57,7 @@ const Signup = () => {
        <div className="inputs">
         <div className="input">
           <img src={user_icon} alt="" />
-           <input type="text" placeholder="Name"  onChange={(e) => setUsername(e.target.value)}/>       
-        </div>
-        <div className="input">
-          <img src={user_icon} alt="" />
-           <input type="number" placeholder="Age" onChange={(e) => {}}/>       
-        </div>
-        <div className="input">
-          <img src={user_icon} alt="" />
-           <input type="url" placeholder="Profile Pic URL" onChange={(e) => {}}/>       
+           <p>username: {email}</p> 
         </div>
       </div>
       
