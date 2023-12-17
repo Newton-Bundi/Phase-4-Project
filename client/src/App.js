@@ -1,7 +1,8 @@
 import './App.css';
 import Home from "./components/home"
 import AvailablePets from "./components/availablepets";
-import LoginSignup from "./components/signupform";
+import Signup from "./components/signupform";
+import Login from "./components/loginForm";
 import Owners from './components/owners';
 import Contact from './components/contact';
 import About from './components/about';
@@ -16,7 +17,8 @@ function App() {
         <Routes>
         <Route path={"/"} element={<Home/>} />
           <Route path={"/availablepets"} element={<AvailablePets/>} />
-          <Route path={"/signupform"} element={<LoginSignup/>} />
+          <Route path={"/signupform"} element={<Signup/>} />
+          <Route path={"/loginform"} element={<Login/>} />
           <Route path={"/owners"} element={<Owners/>} />
           <Route path={"/about"} element={<About/>} />
           <Route path={"/contact"} element={<Contact/>} />
