@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './ownercard';
-import './owners.css';
+import '../css/owners.css';
 
 function Owners () {
   const [cardData, setCardData] = useState([]);

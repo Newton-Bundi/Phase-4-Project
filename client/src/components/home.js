@@ -1,6 +1,6 @@
-import React, {useState,useEffect} from 'react'
-import './home.css'
-import pic from './logo.png'
+import React from 'react'
+import '../css/home.css'
+
 
 function Home(){
 
