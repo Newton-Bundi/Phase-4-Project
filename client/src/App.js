@@ -1,6 +1,6 @@
 import './App.css';
 import Home from "./components/home"
-import AvailablePets from "./components/availablepets";
+import Pets from "./components/pets";
 import Signup from "./components/signupform";
 import Login from "./components/loginForm";
 import Owners from './components/owners';
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
         <Route path={"/"} element={<Home/>} />
-          <Route path={"/availablepets"} element={<AvailablePets/>} />
+          <Route path={"/pets"} element={<Pets/>} />
           <Route path={"/signupform"} element={<Signup/>} />
           <Route path={"/loginform"} element={<Login/>} />
           <Route path={"/owners"} element={<Owners/>} />
