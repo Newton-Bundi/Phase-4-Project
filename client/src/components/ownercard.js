@@ -7,7 +7,7 @@ function Card ({card}) {
     return (
       <div className="card">
         <div className="top-section">
-          <img src={card.imageUrl} alt="Card" className="owner-card-image" height={150} width={150}/>
+          <img src={card.imageurl} alt="Card" className="owner-card-image" height={150} width={150}/>
         </div>
         <div className="middle-section">
           <h1 className="card-name">{card.username}</h1>

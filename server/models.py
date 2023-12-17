@@ -10,7 +10,7 @@ class Pet(db.Model):
     is_adopted = db.Column(db.Boolean, default=False)
     color = db.Column(db.String(100), nullable=True)
     age = db.Column(db.Integer, nullable=False)
-    image_URL = db.Column(db.String(500), nullable=True)
+    image_URL = db.Column(db.String(10000), nullable=True)
     gender= db.Column(db.String(100), nullable=False)
     price = db.Column(db.Integer, nullable=True)
     owner_id = db.Column(db.Integer, db.ForeignKey('owner.id'), nullable=True)

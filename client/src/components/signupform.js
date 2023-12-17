@@ -6,13 +6,13 @@ import email_icon from '../images/email.png';
 import password_icon from '../images/password.png'; 
 import Notification from './notification';
 
-
-
 const Signup = () => {
-  // const [age, setAge] = useState('');
-  // const [profilePic, setProfilePic] = useState('');
+  const [age, setAge] = useState('');
+  const [imageurl, setImageUrl] = useState('');
+  const [pets, setPets] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
   
   const [status, setStatus] = useState(null);
   const [msg, setMsg] = useState(null);
@@ -29,9 +29,12 @@ const Signup = () => {
         'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
-        username: email,
+        username,
         email,
         password,
+        imageurl,
+        age,
+        pets,
       }),
     }).then((res) => {
       
@@ -57,7 +60,7 @@ const Signup = () => {
        <div className="inputs">
         <div className="input">
           <img src={user_icon} alt="" />
-           <p>username: {email}</p> 
+           <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}/>
         </div>
       </div>
       
@@ -68,6 +71,18 @@ const Signup = () => {
       <div className="input">
           <img src={password_icon} alt="" />
            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>       
+      </div>
+      <div className="input">
+          <img src={password_icon} alt="" />
+           <input type="text" placeholder="Link to profile picture" onChange={(e) => setImageUrl(e.target.value)}/>       
+      </div>
+      <div className="input">
+          <img src={password_icon} alt="" />
+           <input type="number" placeholder="Number of pets" onChange={(e) => setPets(e.target.value)}/>       
+      </div>
+      <div className="input">
+          <img src={password_icon} alt="" />
+           <input type="number" placeholder="Age" onChange={(e) => setAge(e.target.value)}/>       
       </div>
       
       <div className="forgot-password">Lost Password? <span>Click Here!</span></div>

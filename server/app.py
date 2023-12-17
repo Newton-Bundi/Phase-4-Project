@@ -24,6 +24,9 @@ def signup():
     username = request.json['username']
     email = request.json['email']
     password = request.json['password']
+    imageurl = request.json['imageurl']
+    pets = request.json['pets']
+    age = request.json['age']
 
     if username is None or email is None or password is None:
         return make_response(jsonify({"msg": "Missing JSON data in request"}), 400)
@@ -31,7 +34,7 @@ def signup():
     if Owner.query.filter_by(username=username).first() or Owner.query.filter_by(email=email).first():
         return make_response(jsonify({"msg": "User already exists"}), 400)
 
-    owner = Owner(username=username, email=email, password=password)
+    owner = Owner(username=username, email=email, password=password,imageurl=imageurl,pets=pets,age=age)
     db.session.add(owner)
     db.session.commit()
 
@@ -158,16 +161,3 @@ def adopt_pet(id):
     pet.owner_id = request.json['owner_id']
     db.session.commit()
     return make_response(jsonify({"msg": "Pet adopted successfully"}), 200)
-
-
-
-
-
-
-
-
-
-
-
-# if __name__ == '__main__':
-#     app.run(debug=True, reload=True)
