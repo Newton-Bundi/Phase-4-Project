@@ -6,7 +6,7 @@ const AvailablePets = () => {
     const [cardData, setCardData] = useState([]);
 
     const fetchData = () => {
-      return fetch('http://localhost:8002/pets') 
+      return fetch('http://localhost:5000/pets') 
       .then((response) => response.json())
       .then((data) => {
         setCardData(data); 
@@ -35,7 +35,7 @@ const AvailablePets = () => {
         setAdoptedDogs(updatedDogs);
     
         // Send the PATCH request here (replace the URL with your actual API endpoint)
-        fetch(`http://localhost:8002/pets/${index}`, {
+        fetch(`http://localhost:5000/pets/${index}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -47,9 +47,9 @@ const AvailablePets = () => {
           .catch(error => console.error('Error updating adopted status:', error));
       };
 
-      useEffect(() => {
-        fetchData()
-      }, [adoptedDogs]); 
+      // useEffect(() => {
+      //   fetchData()
+      // }, [adoptedDogs]); 
 
   return (
     <div>

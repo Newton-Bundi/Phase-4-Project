@@ -64,15 +64,16 @@ def login():
 
 @app.route('/pets', methods=['POST'])
 def create_pet():
+    print(request.json)
     if not request.is_json:
         return make_response(jsonify({"msg": "Missing JSON in request"}), 400)
-    if 'name' not in request.json or 'breed' not in request.json or 'pet_type' not in request.json:
+    if 'name' not in request.json or 'breed' not in request.json or 'petType' not in request.json:
         return make_response(jsonify({"msg": "Missing JSON data in request"}), 400)
 
     age = request.json['age']
     name = request.json['name']
     breed = request.json['breed']
-    pet_type = request.json['pet_type']
+    pet_type = request.json['petType']
     gender = request.json['gender']
 
 
