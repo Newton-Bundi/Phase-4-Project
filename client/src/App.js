@@ -7,6 +7,7 @@ import Owners from './components/owners';
 import Contact from './components/contact';
 import About from './components/about';
 import NavBar from './components/nav';
+import AddPet from './components/addpet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path={"/owners"} element={<Owners/>} />
           <Route path={"/about"} element={<About/>} />
           <Route path={"/contact"} element={<Contact/>} />
+          <Route path={"/addpet"} element={<AddPet/>} />
         </Routes>
       </Router>
     </div>
