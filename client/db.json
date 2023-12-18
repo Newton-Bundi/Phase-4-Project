@@ -145,7 +145,7 @@
       "age": "5",
       "price": "500",
       "petColor": "black",
-      "adopted": false,
+      "adopted": true,
       "breed": "German Sherpherd",
       "id": 10
     }
