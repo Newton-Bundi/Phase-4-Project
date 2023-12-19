@@ -16,6 +16,9 @@ function NavBar(){
                     <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/pets">Pets</a>
                     </li>
+                    {/* <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="/adoptedPets">Adopted Pets</a>
+                    </li> */}
                     <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/owners">Owners</a>
                     </li>

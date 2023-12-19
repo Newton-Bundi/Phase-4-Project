@@ -30,7 +30,7 @@ const AddPet = () => {
       body: JSON.stringify({
         name,
         petType,
-        imageUrl,
+        imageURL:imageUrl,
         age,
         price,
         petColor,
@@ -61,14 +61,17 @@ const AddPet = () => {
       </div>
        <div className="inputs">
         <div className="input">
+            Pet Name: {" "}
            <input type="text" placeholder="pet name" onChange={(e) => setName(e.target.value)}/>
         </div>
       </div>
       
       <div className="input">
+          Pet Type: {" "}
            <input type="text" placeholder="pet type e.g Dog" onChange={(e) => setPettype(e.target.value)}/>       
       </div>
       <div className="input">
+          Gender: {" "}
            <input type="text" placeholder="gender" onChange={(e) => setGender(e.target.value)}/>       
       </div>
       <div className="input">
@@ -81,6 +84,7 @@ const AddPet = () => {
            <input type="text" placeholder="Pet color" onChange={(e) => setPetColor(e.target.value)}/>       
       </div>
       <div className="input">
+          Image URL: {" "}
            <input type="text" placeholder="Link to pet picture" onChange={(e) => setImageUrl(e.target.value)}/>       
       </div>
       <div className="input">

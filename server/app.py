@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request, make_response
 from flask_migrate import Migrate
 from .models import db, Pet, Owner
 from flask_cors import CORS
+import jwt
+
+JWT_SECRET = 'secret'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pets.db'
@@ -59,7 +62,8 @@ def login():
     if not owner:
         return make_response(jsonify({"msg": "Invalid username or password"}), 401)
 
-    return make_response(jsonify({"msg": "Login successful"}), 200)
+    token = jwt.encode({'user_id': owner.id}, JWT_SECRET, algorithm='HS256')
+    return make_response(jsonify({"msg": "Login successful", "token": token}), 200)
 
 
 @app.route('/pets', methods=['POST'])
@@ -75,12 +79,13 @@ def create_pet():
     breed = request.json['breed']
     pet_type = request.json['petType']
     gender = request.json['gender']
+    image_URL = request.json.get('imageURL', None)
 
 
     if name is None or breed is None or pet_type is None:
         return make_response(jsonify({"msg": "Missing JSON data in request"}), 400)
 
-    pet = Pet(name=name, breed=breed, pet_type=pet_type, age=age, gender=gender)
+    pet = Pet(name=name, breed=breed, pet_type=pet_type, age=age, gender=gender, image_URL=image_URL)
     db.session.add(pet)
     db.session.commit()
 
@@ -153,12 +158,23 @@ def delete_owner():
 
 @app.route('/adopt/<int:id>', methods=['PUT'])
 def adopt_pet(id):
+    bearer = request.headers.get('Authorization')
+    if not bearer:
+        return make_response(jsonify({"msg": "Missing Authorization header"}), 401)
+    
+    token = bearer.split(' ')[1]
+    print(token)
+    try:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=['HS256'])
+    except:
+        return make_response(jsonify({"msg": "Invalid token"}), 401)
+    
+    owner_id = payload['user_id']
     pet = Pet.query.get(id)
     if not pet:
         return make_response(jsonify({"msg": "Pet not found"}), 404)
     pet.is_adopted = True
-    if "owner_id" not in request.json:
-        return make_response(jsonify({"msg": "Missing JSON data in request"}), 400)
-    pet.owner_id = request.json['owner_id']
+    
+    pet.owner_id = owner_id
     db.session.commit()
     return make_response(jsonify({"msg": "Pet adopted successfully"}), 200)

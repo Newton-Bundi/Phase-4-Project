@@ -1,6 +1,7 @@
 import './App.css';
 import Home from "./components/home"
-import Pets from "./components/pets";
+import AvailablePets from "./components/availablepets";
+import AdoptedPets from "./components/adoptedpets";
 import Signup from "./components/signupform";
 import Login from "./components/loginForm";
 import Owners from './components/owners';
@@ -17,7 +18,8 @@ function App() {
       <Router>
         <Routes>
         <Route path={"/"} element={<Home/>} />
-          <Route path={"/pets"} element={<Pets/>} />
+          <Route path={"/pets"} element={<AvailablePets/>} />
+          <Route path={"/adoptedPets"} element={<AdoptedPets/>} />
           <Route path={"/signupform"} element={<Signup/>} />
           <Route path={"/loginform"} element={<Login/>} />
           <Route path={"/owners"} element={<Owners/>} />

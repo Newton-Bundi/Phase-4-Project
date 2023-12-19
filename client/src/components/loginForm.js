@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/loginsignup.css';
 
-import user_icon from '../images/person.png';
+
 import email_icon from '../images/email.png'; 
 import password_icon from '../images/password.png'; 
 import Notification from './notification';
@@ -38,6 +38,8 @@ const Login = () => {
         }
         return res.json();
     }).then((data) => {
+      const token = data.token;
+      localStorage.setItem('token', token);
       setMsg(data.msg);
     })
     }
