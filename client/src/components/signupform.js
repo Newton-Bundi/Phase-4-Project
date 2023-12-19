@@ -73,15 +73,15 @@ const Signup = () => {
            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>       
       </div>
       <div className="input">
-          <img src={password_icon} alt="" />
+          <img src={"password_icon"} alt="" />
            <input type="text" placeholder="Link to profile picture" onChange={(e) => setImageUrl(e.target.value)}/>       
       </div>
       <div className="input">
-          <img src={password_icon} alt="" />
+          <img src={"password_icon"} alt="" />
            <input type="number" placeholder="Number of pets" onChange={(e) => setPets(e.target.value)}/>       
       </div>
       <div className="input">
-          <img src={password_icon} alt="" />
+          <img src={"password_icon"} alt="" />
            <input type="number" placeholder="Age" onChange={(e) => setAge(e.target.value)}/>       
       </div>
       

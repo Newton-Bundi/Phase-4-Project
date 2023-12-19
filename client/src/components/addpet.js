@@ -55,31 +55,38 @@ const AddPet = () => {
   return (
     <div className='container'>
       <div className="header">
-        <div className="text">Signup</div>
+        <div className="text">Add a pet</div>
         <div className="underline"></div>
       </div>
        <div className="inputs">
         <div className="input">
+        <img src={"password_icon"} alt="" />
            <input type="text" placeholder="pet name" onChange={(e) => setName(e.target.value)}/>
         </div>
       </div>
       
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="text" placeholder="pet type e.g Dog" onChange={(e) => setPettype(e.target.value)}/>       
       </div>
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="text" placeholder="breed" onChange={(e) => setBreed(e.target.value)}/>       
       </div>
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="number" placeholder="price" onChange={(e) => setPrice(e.target.value)}/>       
       </div>
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="text" placeholder="Pet color" onChange={(e) => setPetColor(e.target.value)}/>       
       </div>
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="text" placeholder="Link to pet picture" onChange={(e) => setImageUrl(e.target.value)}/>       
       </div>
       <div className="input">
+      <img src={"password_icon"} alt="" />
            <input type="number" placeholder="Age" onChange={(e) => setAge(e.target.value)}/>       
       </div>
       

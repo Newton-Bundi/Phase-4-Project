@@ -7,14 +7,18 @@ import password_icon from '../images/password.png';
 import Notification from './notification';
 
 const Login = () => {
+
     const [status, setStatus] = useState(null);
     const [msg, setMsg] = useState(null);
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+
     const handleSubmit = (e) => {
+
       e.preventDefault();
+
       console.log(username, password);
       fetch('http://localhost:5000/login', {
         method: 'POST',
@@ -40,6 +44,18 @@ const Login = () => {
     }).then((data) => {
       setMsg(data.msg);
     })
+
+    fetch(`http://localhost:8002/user/1`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name: username }),
+    })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error updating adopted status:', error));
+
     }
 
 
@@ -53,7 +69,7 @@ const Login = () => {
         
       <div className="input">
           <img src={email_icon} alt="" />
-           <input type="username" placeholder="username"  onChange={(e) => setUsername(e.target.value)}/>       
+           <input type="username" placeholder="username" onChange={(e) => setUsername(e.target.value)}/>       
       </div>
       <div className="input">
           <img src={password_icon} alt="" />

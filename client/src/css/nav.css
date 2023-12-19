@@ -5,12 +5,20 @@
     font-size: xx-large;
 }
 
+.user-name{
+  padding:30px;
+  padding-left:170px;
+  align-content: right;
+  word-break: normal;
+  font-size: xx-large;
+}
+
 .logo{
     background: #F9CE81;
     padding: 10px;
 }
 .navbar-nav{
-    margin-left: 35vh;
+    margin-left: 30vh;
  }
 
 .container-fluid{
@@ -24,7 +32,7 @@
 
 
 .nav-item{
-    padding-top:30px;
+    padding-top:70px;
     padding: 15px;
     display: inline-block;
     font-size: x-large;
