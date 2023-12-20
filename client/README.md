@@ -1,75 +1,129 @@
-# Getting Started with Create React App
+# Pet Shop is an app that links fluffy and cuddly pets to people looking for a tiny adorable creature to pour their hearts into. Wanna hold a fluffy and cuddly creature, here's how....
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# To run the App
+1. Run **pipenv install && pipenv shell** in the 'Phase-4-Project' directory
+2. Run **./init.sh** - which initializes the flask server
+3. Run **./run.sh** - which runs the initialized server
+4. Change directories (Cd) into the client folder using '**cd client**'
+5. Run **npm install** then npm run server to install packages and initialize the react server
+6. Finally **npm start** to run the React application in your browser
 
-## Available Scripts
+# Server instructions (Instructions on interacting with the app's API)
 
-In the project directory, you can run:
-### `npm install`
-Please run this first in the client folder to install all dependencies
+This document provides an overview of the endpoints available in the Pet Adoption API and the expected payload for each request.
 
-### `npm run server`
-Please run this to set up the db.json server
+## User Authentication
 
-### `npm start`
+### Sign Up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Endpoint:** `/signup`
+- **Method:** `POST`
+- **Payload:**
+  ```json
+  {
+    "username": "string",
+    "email": "string",
+    "password": "string"
+  }
+  ```
+- **Description:** Creates a new user account.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Log In
 
-### `npm test`
+- **Endpoint:** `/login`
+- **Method:** `POST`
+- **Payload:**
+  ```json
+  {
+    "username": "string",
+    "password": "string"
+  }
+  ```
+- **Description:** Logs in an existing user.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pet Management
 
-### `npm run build`
+### Create a Pet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Endpoint:** `/pets`
+- **Method:** `POST`
+- **Payload:**
+  ```json
+  {
+    "name": "string",
+    "breed": "string",
+    "pet_type": "string",
+    "age": "integer",
+    "gender": "string"
+  }
+  ```
+- **Description:** Adds a new pet to the database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Get All Pets
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Endpoint:** `/pets`
+- **Method:** `GET`
+- **Description:** Retrieves a list of all pets.
 
-### `npm run eject`
+### Get Pet by ID
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Endpoint:** `/pets/{id}`
+- **Method:** `GET`
+- **Description:** Retrieves information about a specific pet.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Update Pet by ID
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Endpoint:** `/pets/{id}`
+- **Method:** `PUT`
+- **Payload:**
+  ```json
+  {
+    "name": "string",
+    "breed": "string",
+    "pet_type": "string",
+    "is_adopted": "boolean",
+    "color": "string",
+    "age": "integer",
+    "image_URL": "string",
+    "gender": "string",
+    "price": "interger"
+  }
+  ```
+- **Description:** Updates information for a specific pet.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Delete Pet by ID
 
-## Learn More
+- **Endpoint:** `/pets/{id}`
+- **Method:** `DELETE`
+- **Description:** Deletes a specific pet from the database.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Get All Owners
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Endpoint:** `/owners`
+- **Method:** `GET`
+- **Description:** Retrieves a list of all owners.
 
-### Code Splitting
+### Delete an Owner
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Endpoint:** `/owners`
+- **Method:** `DELETE`
+- **Description:** Deletes the first owner from the database.
 
-### Analyzing the Bundle Size
+### Adopt a Pet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Endpoint:** `/adopt/{id}`
+- **Method:** `PUT`
+- **Payload:**
+  ```json
+  {
+    "owner_id": "integer"
+  }
+  ```
+- **Description:** Adopts a pet by assigning it to a specific owner.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+*Note: Replace "string" and "integer" with the appropriate data types for your application.*
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This Markdown document includes documentation for each endpoint in your Flask API, detailing the HTTP method, endpoint URL, expected payload for `POST` and `PUT` requests, and a brief description of each endpoint's purpose.
