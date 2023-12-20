@@ -2,7 +2,7 @@
 
 # To run the App
 1. Run **pipenv install && pipenv shell** in the 'Phase-4-Project' directory
-2. Run **./init.sh** - which initializes the server
+2. Run **./init.sh** - which initializes the flask server
 3. Run **./run.sh** - which runs the initialized server
 4. Change directories (Cd) into the client folder using '**cd client**'
 5. Run **npm install** then npm run server to install packages and initialize the react server
