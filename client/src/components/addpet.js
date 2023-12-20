@@ -11,6 +11,7 @@ const AddPet = () => {
   const [price, setPrice] = useState('');
   const [petColor, setPetColor] = useState('');
   const [name, setName] = useState('');
+  const [gender, setGender] = useState('');
   
   const [status, setStatus] = useState(null);
   const [msg, setMsg] = useState(null);
@@ -18,7 +19,7 @@ const AddPet = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name,breed,petType);
-    fetch('http://localhost:8002/pets', {
+    fetch('http://localhost:5000/pets', {
       method: 'POST',
       crossDomain: true,
       headers: {
@@ -33,9 +34,9 @@ const AddPet = () => {
         age,
         price,
         petColor,
-        imageUrl,
         adopted:false,
         breed,
+        gender
       }),
     }).then((res) => {
       
@@ -70,7 +71,6 @@ const AddPet = () => {
            <input type="text" placeholder="pet type e.g Dog" onChange={(e) => setPettype(e.target.value)}/>       
       </div>
       <div className="input">
-      <img src={"password_icon"} alt="" />
            <input type="text" placeholder="breed" onChange={(e) => setBreed(e.target.value)}/>       
       </div>
       <div className="input">
