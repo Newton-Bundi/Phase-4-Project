@@ -169,10 +169,10 @@
       "age": "30",
       "price": "400",
       "petColor": "Ginger",
-      "adopted": false,
+      "adopted": true,
       "breed": "tabby",
       "id": 13,
-      "owner": null
+      "owner": "PerisK"
     }
   ],
   "user": [
