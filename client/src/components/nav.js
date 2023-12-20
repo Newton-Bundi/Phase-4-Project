@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/nav.css'
 
-function NavBar(){
+function NavBar({ dataFromParent }){
 
     return (
         <nav className="navbar">
@@ -38,6 +38,7 @@ function NavBar(){
                     
                 </ul>
                 </div>
+                <a className="user-name" href="/">Welcome, {dataFromParent}</a>
             </div>
             </nav>
     )

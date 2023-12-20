@@ -6,6 +6,11 @@
     display: inline-block;
     box-sizing: border-box;
   }
+
+  .adopt-icon small-icom{
+    padding: 2px;
+    margin: 10px;
+  }
   
   .pet-card img {
     width: 100%;

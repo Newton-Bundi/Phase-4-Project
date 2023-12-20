@@ -1,0 +1,153 @@
+{
+  "owners": [
+    {
+      "id": 101,
+      "name": "Winnie",
+      "imageUrl": "https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1",
+      "pets": 3,
+      "age": 40
+    },
+    {
+      "id": 102,
+      "name": "Poo",
+      "imageUrl": "https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1",
+      "pets": 1,
+      "age": 18
+    },
+    {
+      "id": 103,
+      "name": "Frank",
+      "imageUrl": "https://robohash.org/idetcumque.png?size=300x300&set=set1",
+      "pets": 3,
+      "age": 25
+    },
+    {
+      "id": 104,
+      "name": "Ben",
+      "imageUrl": "https://robohash.org/corruptieaqueexcepturi.png?size=300x300&set=set1",
+      "pets": 1,
+      "age": 36
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Buddy",
+      "petType": "Dog",
+      "breed": "Labrador Retriever",
+      "price": 500,
+      "adopted": true,
+      "petColor": "Golden",
+      "imageUrl": "https://images.unsplash.com/photo-1561495376-dc9c7c5b8726?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "age": 2,
+      "ownerId": "ABC123"
+    },
+    {
+      "id": 2,
+      "name": "Rocky",
+      "petType": "Dog",
+      "breed": "German Shepherd",
+      "price": 600,
+      "adopted": false,
+      "petColor": "Black and Tan",
+      "imageUrl": "https://images.unsplash.com/photo-1619980296991-5c0d64b23950?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "age": 3,
+      "ownerId": "GHI789"
+    },
+    {
+      "id": 3,
+      "name": "Luna",
+      "petType": "Dog",
+      "breed": "Poodle",
+      "price": 600,
+      "adopted": false,
+      "petColor": "White",
+      "imageUrl": "https://www.southernliving.com/thmb/mF4LmyNA32KAxr2Xm0oSPvOfB8g=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-650044139-2000-1671d5d378504f989210a2e22ae6a203.jpg",
+      "age": 3,
+      "ownerId": "GHI789"
+    },
+    {
+      "id": 4,
+      "name": "Cooper",
+      "petType": "Dog",
+      "breed": "Dachshund",
+      "price": 600,
+      "adopted": false,
+      "petColor": "Black and Tan",
+      "imageUrl": "https://cdn.pixabay.com/photo/2023/04/07/05/10/dog-7905519_1280.jpg",
+      "age": 3,
+      "ownerId": "GHI789"
+    },
+    {
+      "id": 5,
+      "name": "Finn",
+      "petType": "Dog",
+      "breed": "Rotweiller",
+      "price": 750,
+      "adopted": true,
+      "petColor": "Black and brown",
+      "imageUrl": "https://ntbrand-wp.s3.amazonaws.com/mystart/wp-content/uploads/2020/03/12150859/My_Rotweiller_00-1170x781.jpeg",
+      "age": 2,
+      "ownerId": "ABC123"
+    },
+    {
+      "id": 6,
+      "name": "Lexi",
+      "petType": "Dog",
+      "breed": "Bulldog",
+      "price": 800,
+      "adopted": false,
+      "petColor": "Brown and white",
+      "imageUrl": "https://cdn.akc.org/BulldogPup_BlogHeader.jpg",
+      "age": 2,
+      "ownerId": "ABC123"
+    },
+    {
+      "id": 7,
+      "name": "Max",
+      "petType": "Dog",
+      "breed": "Golden Retriever",
+      "price": 550,
+      "adopted": false,
+      "petColor": "Beige",
+      "imageUrl": "https://as1.ftcdn.net/v2/jpg/01/68/93/76/1000_F_168937669_flXieX0V8ztmBWYZELyJfCJps0RyYXB3.jpg",
+      "age": 2,
+      "ownerId": "JKL012"
+    },
+    {
+      "id": 8,
+      "name": "Charlie",
+      "petType": "Dog",
+      "breed": "Beagle",
+      "price": 400,
+      "adopted": false,
+      "petColor": "Tri-color",
+      "imageUrl": "https://images.unsplash.com/photo-1534985111090-85c477f9d813?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWdsZSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D",
+      "age": 1,
+      "ownerId": "MNO345"
+    },
+    {
+      "id": 9,
+      "name": "Ollie",
+      "petType": "Dog",
+      "breed": "Japanese-Spitz",
+      "price": 300,
+      "adopted": false,
+      "petColor": "White",
+      "imageUrl": "https://a-z-animals.com/media/2021/08/Japanese-spitz-running.jpg",
+      "age": 3,
+      "ownerId": "MNO345"
+    },
+    {
+      "name": "Newton",
+      "petType": "Dog",
+      "imageUrl": "data:image/jpeg;base64,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",
+      "age": "5",
+      "price": "500",
+      "petColor": "black",
+      "adopted": true,
+      "breed": "German Sherpherd",
+      "id": 10
+    }
+  ]
+}

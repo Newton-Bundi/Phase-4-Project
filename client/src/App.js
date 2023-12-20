@@ -8,18 +8,37 @@ import Contact from './components/contact';
 import About from './components/about';
 import NavBar from './components/nav';
 import AddPet from './components/addpet';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
+
+  const [username, setUsername] = useState('');
+
+  const fetchData = () => {
+    return fetch('http://localhost:8002/user/1') 
+    .then((response) => response.json())
+    .then((data) => {
+      setUsername(data.name); 
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, []); 
+
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar dataFromParent={username}/>
       <Router>
         <Routes>
         <Route path={"/"} element={<Home/>} />
-          <Route path={"/pets"} element={<Pets/>} />
+          <Route path={"/pets"} element={<Pets dataFromParent={username}/>} />
           <Route path={"/signupform"} element={<Signup/>} />
-          <Route path={"/loginform"} element={<Login/>} />
+          <Route path={"/loginform"} element={<Login />} />
           <Route path={"/owners"} element={<Owners/>} />
           <Route path={"/about"} element={<About/>} />
           <Route path={"/contact"} element={<Contact/>} />
