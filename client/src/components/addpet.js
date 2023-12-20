@@ -41,7 +41,7 @@ const AddPet = () => {
       
       if (res.status === 200 || res.status === 201) {
         setStatus('success');
-        window.location.href = '/loginform';
+        window.location.href = '/pets';
       } else {
         setStatus('error');
       }

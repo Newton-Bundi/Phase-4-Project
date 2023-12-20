@@ -1,5 +1,5 @@
 import PetCard from './petcard';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const AvailablePets = ({availablePets,handleAdoption,handleDelete}) => {
 
@@ -18,7 +18,6 @@ const AvailablePets = ({availablePets,handleAdoption,handleDelete}) => {
         petColor={pet.petColor}
         imageUrl={pet.imageUrl}
         age={pet.age}
-        owner={pet.owner}
         pet={pet}       
         handleAdoption={handleAdoption}
         handleDelete={handleDelete}

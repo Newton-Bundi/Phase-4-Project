@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/petcard.css';
 
-const PetCard = ({petType,adopted, imageUrl,name,breed,price,petColor,age,owner,pet, handleAdoption,handleDelete,handleUnadoption}) => {
+const PetCard = ({dataFromParent,petType,adopted, imageUrl,name,breed,price,petColor,age,owner,pet, handleAdoption,handleDelete,handleUnadoption}) => {
  
     
     return (

@@ -22,7 +22,7 @@ function Pets({dataFromParent}) {
   }, []); 
 
   const availablePets = cardData.filter(availablepet => availablepet.adopted===false);         
-  const adoptedPets = cardData.filter(adoptedpet => adoptedpet.adopted===true);   
+  let adoptedPets = cardData.filter(adoptedpet => adoptedpet.adopted===true);   
 
   const [toBeAdopted, setAdoptedDogs] = useState(availablePets);
   const [toBeUnadopted, setUnAdoptedDogs] = useState(adoptedPets);
@@ -110,7 +110,7 @@ function Pets({dataFromParent}) {
       fetchData()
     }, [toBeDeleted]);
   
-  
+    adoptedPets = adoptedPets.filter((pet) => pet.owner === dataFromParent);
     return (
       <div className="App">
         <AvailablePets 

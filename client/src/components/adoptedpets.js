@@ -1,6 +1,6 @@
 import PetCard from './petcard';
 
-const AdoptedPets = ({adoptedPets,handleUnadoption}) => {
+const AdoptedPets = ({adoptedPets,handleUnadoption,dataFromParent}) => {
 
     
   return (
@@ -19,7 +19,8 @@ const AdoptedPets = ({adoptedPets,handleUnadoption}) => {
         imageUrl={pet.imageUrl}
         age={pet.age}
         owner={pet.owner}
-        handleUnadoption={handleUnadoption}     
+        handleUnadoption={handleUnadoption}
+        dataFromParent={dataFromParent}     
         />
       ))}
     </div>
