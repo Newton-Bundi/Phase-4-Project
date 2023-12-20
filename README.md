@@ -1,5 +1,3 @@
-```markdown
-
 # Pet Shop is an app that links fluffy and cuddly pets to people looking for a tiny adorable creature to pour their hearts into. Wanna hold a fluffy and cuddly creature, here's how....
 
 # To run the App
